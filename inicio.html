@@ -15,12 +15,39 @@
 <script type="application/javascript">
     let fiesta = new Fiesta();
     fiesta.registrarPersona("Juan", "Perez", 20, true) 
-    fiesta.registrarPersona("Maria", "Perez", 20, false)    
-    fiesta.registrarPersona("Ana", "Perez", 20, false)
+    fiesta.registrarPersona("Marcelo", "Ramirez", 20, true) 
+    fiesta.registrarPersona("Maria", "Baez", 20, false)    
+    fiesta.registrarPersona("Ana", "Garcia", 20, false)
     fiesta.mostrarPersonasFiesta()
     console.log(fiesta)
     fiesta.sacarPersona(2)
     fiesta.mostrarPersonasFiesta()
+
+
+
+    // -- al precionar la tecla p se debe mostrar en consola las personas que estan en la fiesta
+    document.addEventListener("keypress", function (event) {
+        if (event.key === "r") {
+            let nombre = prompt("Ingrese el nombre de la persona")
+            let apellido = prompt("Ingrese el apellido de la persona")
+            let edad = prompt("Ingrese la edad de la persona")
+            let sexo = prompt("Ingrese el sexo de la persona")
+            if (sexo === "m" || sexo === "M")
+                sexo = true
+            else
+                sexo = false            
+            fiesta.registrarPersona(nombre, apellido, edad, sexo)
+        }
+    })
+    
+    // -- evento click en clase personas
+    document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("personas")) {
+            alert("Hola")
+        }
+    })    
+    
+
 //console.log(fiesta)
 </script>
 </html>
