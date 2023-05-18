@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body background="img/tablero.jpeg">
+
+</body>
+<script src="Modelos/Fiesta.js"></script>
+<script src="Modelos/Persona.js"></script>
+<script type="application/javascript">
+    let fiesta = new Fiesta();
+    fiesta.registrarPersona("Juan", "Perez", 20, true) 
+    fiesta.registrarPersona("Maria", "Perez", 20, false)    
+    fiesta.registrarPersona("Ana", "Perez", 20, false)
+    fiesta.mostrarPersonasFiesta()
+    console.log(fiesta)
+    fiesta.sacarPersona(2)
+    fiesta.mostrarPersonasFiesta()
+//console.log(fiesta)
+</script>
+</html>
